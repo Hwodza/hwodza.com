@@ -1,0 +1,58 @@
+---
+---
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">Henry</a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about" class="nav-link">About Me</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background-color: #333;
+    padding: 1em 0;
+    margin-bottom: 2em;
+  }
+
+  .nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-link:hover {
+    color: #ccc;
+  }
+</style>
