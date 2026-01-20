@@ -1,10 +1,119 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const posts = [
+  {
+    title: "Placeholder",
+    slug: "exBlog",
+    date: "2026-01-20",
+    excerpt: "This is just an placehoder"
+  }
+];
 ---
 
 <Layout title="Home Page">
-    <h1>Howdy! </h1>
-    <h2>I'm Henry</h2>
-    <p>More to come soon</p>
+  <div class="content">
+    <h1>Welcome</h1>
+    
+    <section class="intro">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </section>
+
+    <section class="blog-posts">
+      <h2>Recent Blog Posts</h2>
+      <div class="posts-list">
+        {posts.map((post) => (
+          <article class="post-card">
+            <h3><a href={`/posts/${post.slug}`}>{post.title}</a></h3>
+            <p class="post-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p class="post-excerpt">{post.excerpt}</p>
+            <a href={`/posts/${post.slug}`} class="read-more">Read More →</a>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<style>
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .intro {
+    margin-bottom: 3em;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .blog-posts {
+    margin-top: 3em;
+  }
+
+  .blog-posts h2 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .post-card {
+    padding: 1.5em;
+    background-color: #f5f5f5;
+    border-left: 4px solid #333;
+    transition: box-shadow 0.3s;
+  }
+
+  .post-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-card h3 {
+    margin: 0 0 0.5em 0;
+  }
+
+  .post-card a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .post-card a:hover {
+    text-decoration: underline;
+  }
+
+  .post-date {
+    color: #666;
+    font-size: 0.9em;
+    margin: 0.5em 0 1em 0;
+  }
+
+  .post-excerpt {
+    margin: 1em 0;
+    color: #555;
+  }
+
+  .read-more {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+</style>
