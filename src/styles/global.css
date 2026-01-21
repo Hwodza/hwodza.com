@@ -18,3 +18,130 @@ h2 {
   font-size: 1.5em;
   margin-top: 0;
 } 
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+#Howdy {
+  margin-bottom: 0em;
+}
+
+.intro {
+  margin-top: 0em;
+  margin-bottom: 3em;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+#small-about {
+  margin-top: 0em;
+}
+
+.blog-posts {
+  margin-top: 3em;
+}
+
+.blog-posts h2 {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.post-card {
+  padding: 1.5em;
+  background-color: #f5f5f5;
+  border-left: 4px solid #333;
+  transition: box-shadow 0.3s;
+}
+
+.post-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+  margin: 0 0 0.5em 0;
+}
+
+.post-card a {
+  color: #333;
+  text-decoration: none;
+}
+
+.post-card a:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  color: #666;
+  font-size: 0.9em;
+  margin: 0.5em 0 1em 0;
+}
+
+.post-excerpt {
+  margin: 1em 0;
+  color: #555;
+}
+
+.read-more {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 1em 0;
+  margin-bottom: 2em;
+}
+
+.nav-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
