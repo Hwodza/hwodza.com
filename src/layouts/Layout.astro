@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -12,7 +12,7 @@ import Navigation from "../components/Navigation.astro";
 		<title>{Astro.props.title}</title>
 	</head>
 	<body>
-		<Navigation />
+		<Header />
 		<slot />
 	</body>
 </html>
