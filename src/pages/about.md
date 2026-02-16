@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/Layout.astro"
+layout: "../layouts/MarkdownLayout.astro"
 ---
 
 # Hello!
@@ -28,3 +28,6 @@ My love for open source led me to CWRUnix, the Linux club on campus, this past f
 
 # Get in Touch
 You can email me at hwodza [AT] gmail [DOT] com
+
+# A little about this site
+This site is made with the Astro framework, which means that there is no client side javascript. You can view all the code on my github, and the site is hosted with
