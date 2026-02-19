@@ -7,6 +7,13 @@ const posts = [
     slug: "exBlog",
     date: "2026-01-20",
     excerpt: "This is just an placehoder"
+  },
+  
+  {
+    title: "1Placeholder",
+    slug: "exBlog",
+    date: "2026-01-20",
+    excerpt: "This is just an placehoder"
   }
 ];
 ---
@@ -29,8 +36,10 @@ const posts = [
       <div class="posts-list">
         {posts.map((post) => (
           <article class="post-card">
-            <h3><a href={`/posts/${post.slug}`}>{post.title}</a></h3>
-            <p class="post-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <div class="post-header">
+              <h3><a href={`/posts/${post.slug}`}>{post.title}</a></h3>
+              <p class="post-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            </div>
             <p class="post-excerpt">{post.excerpt}</p>
             <a href={`/posts/${post.slug}`} class="read-more">Read More →</a>
           </article>
