@@ -129,6 +129,50 @@ footer {
   margin-top: auto;
 }
 
+.animate {
+  font-size: 50px;
+  margin: 100px 0 0;
+  /* border-bottom: 2px solid black; */
+}
+
+.animate span {
+  display: inline-block;
+  opacity: 0;
+}
+
+.animate span:nth-of-type(2) {
+	animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+	animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+	animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+	animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+	animation-delay: .25s;
+}
+
+.howdy span {
+  color: #ddb50f;
+  opacity: 0;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: howdy .75s forwards;
+}
+
+@keyframes howdy {
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translate(0);
+    opacity: 1;
+  }
+}
+
 a {
   color: var(--link-color);
   text-decoration: underline;
