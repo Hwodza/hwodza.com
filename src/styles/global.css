@@ -103,10 +103,10 @@ header {
       transition: transform 0.2s linear;
     }
     .icon-moon {
-      padding: 3px 0 0 4px;
+      padding: 3px 4px 0 0;
     }
     .icon-sun {
-      padding: 3px 4px 0 0px;
+      padding: 3px 0 0 4px;
     }
     .checkbox {
       opacity: 0;
