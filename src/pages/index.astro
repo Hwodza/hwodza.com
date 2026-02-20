@@ -1,20 +1,14 @@
 ---
+import { date } from "astro:schema";
 import Layout from "../layouts/Layout.astro";
 
 const posts = [
   {
-    title: "Placeholder",
-    slug: "exBlog",
-    date: "2026-01-20",
-    excerpt: "This is just an placehoder"
+    title: "What is Computer Science?",
+    slug: "WhatIsCS",
+    date: "2026-02-20",
+    excerpt: "What is the study of computer science? What makes it unique?",
   },
-  
-  {
-    title: "1Placeholder",
-    slug: "exBlog",
-    date: "2026-01-20",
-    excerpt: "This is just an placehoder"
-  }
 ];
 ---
 
@@ -42,7 +36,7 @@ const posts = [
           <article class="post-card">
             <div class="post-header">
               <h3><a href={`/posts/${post.slug}`}>{post.title}</a></h3>
-              <p class="post-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <p class="post-date">{new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
             </div>
             <p class="post-excerpt">{post.excerpt}</p>
             <a href={`/posts/${post.slug}`} class="read-more">Read More →</a>
