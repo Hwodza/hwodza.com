@@ -6,10 +6,11 @@
   --header-txt: var(--card-foreground);
   --footer-txt: var(--card-foreground);
   --link-color: var(--accent);
-  --toggle-bg: var(--background);
+  --toggle-bg: var(--primary);
   --border1: var(--primary);
   --accent1: var(--accent);
   --howdy-color: var(--primary);
+  --blog: var(--card)
   --color-1: oklch(0.175 0.032 165);
   --color-2: oklch(0.206 0.045 165);
   --color-3: oklch(0.269 0.083 165);
@@ -34,24 +35,24 @@
   --primary: oklch(63.256% 0.15016 157.189);
   --primary-foreground: oklch(22.648% 0.04933 162.486);
   --accent: oklch(90.249% 0.15586 164.077);
+  --light-background: oklch(97.448% 0.02284 173.15);
+  --light-foreground: oklch(22.648% 0.04933 162.486);
+  --light-card: oklch(100% 0.00011 271.152);
+  --light-card-foreground: oklch(22.648% 0.04933 162.486);
+  --light-primary: oklch(34.433% 0.07856 159.496);
+  --light-primary-foreground: oklch(97.448% 0.02284 173.15);
+  --light-accent: oklch(30.743% 0.06966 159.917);
 }
 
 
 :has(#light-mode-toggle:checked) {
-  --bg-color: var(--color-12);
-  --txt-color: oklch(0.9 0.1 271);
-  --header-bg: var(--color-6);
-  --header-txt: var(--color-12);
-  --link-color: var(--color-4);
+  --bg-color: var(--light-background);
+  --txt-color: var(--light-foreground);
+  /* --header-bg: var(--light-card);
+  --header-txt: var(--light-card-foreground); */
+  --link-color: var(--light-accent);
   --txt-color: oklch(0 0 0);
-  --toggle-bg: var(--color-9);
-  --background: oklch(97.448% 0.02284 173.15);
-  --foreground: oklch(22.648% 0.04933 162.486);
-  --card: oklch(100% 0.00011 271.152);
-  --card-foreground: oklch(22.648% 0.04933 162.486);
-  --primary: oklch(34.433% 0.07856 159.496);
-  --primary-foreground: oklch(97.448% 0.02284 173.15);
-  --accent: oklch(30.743% 0.06966 159.917);
+  /* --toggle-bg: var(--light-primary); */
 }
 
 body {
@@ -292,8 +293,12 @@ a {
 
   .post-card {
     padding: 1.5em;
-    background-color: var(--card);
+    background-color: var(--blog);
     border-left: 4px solid var(--border1);
+    border-top: 1px solid var(--border1);
+    border-bottom: 1px solid var(--border1);
+    border-right: 1px solid var(--border1);
+    border-radius: 1rem;
     h3 {
       margin: 0;
     }
