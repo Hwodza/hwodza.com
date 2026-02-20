@@ -4,8 +4,7 @@ layout: "../layouts/MarkdownLayout.astro"
 
 # Hello!
 
-My name is Henry Odza, and I am a senior at Case Western Reserve
-University studying computer science with a minor in history. I find myself spending my time learning and reading. 
+My name is Henry Odza, and I am a senior at Case Western Reserve University studying computer science with a minor in history. I find myself spending my time learning and reading. 
 
 I like to explore things and learn why they are the way they are. This not only
 applies to software, but the systems that make up our world and society, as well

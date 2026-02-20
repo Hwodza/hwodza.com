@@ -1,7 +1,21 @@
 ---
 import Layout from "./Layout.astro";
 
-const { title } = Astro.props;
+
+// Get title from props or fallback to filename
+let { title } = Astro.props;
+if (!title) {
+  // Get pathname, e.g. /posts/exBlog
+  const path = Astro.url.pathname;
+  // Remove trailing slash if present
+  const cleanPath = path.endsWith('/') ? path.slice(0, -1) : path;
+  // Get last segment (filename)
+  let fileName = cleanPath.split('/').pop();
+  // Remove extension if present
+  if (fileName && fileName.includes('.')) fileName = fileName.split('.')[0];
+  // Capitalize first letter
+  if (fileName) title = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+}
 ---
 
 <Layout title={title || "Page"}>
