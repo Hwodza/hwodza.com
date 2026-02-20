@@ -1,22 +1,15 @@
 :root {
-  --bg-color: var(--color-4);
-  --txt-color: oklch(1 0 271);
-  --header-bg: var(--color-6);
-  --footer-bg: var(--color-5);
-  --header-txt: var(--color-11);
-  --footer-txt: white;
-  --link-color: var(--color-10);
-  --toggle-bg: var(--color-8);
-  --border1: var(--color-7);
-  --accent1: var(--color-12);
-  /* --color-1: oklch(0.3 0.1 145);
-  --color-2: oklch(0.35 0.12 150);
-  --color-3: oklch(0.45 0.15 155);
-  --color-4: oklch(0.5 0.16 158);
-  --color-5: oklch(0.55 0.18 160);
-  --color-6: oklch(0.6 0.16 163);
-  --color-7: oklch(0.65 0.15 165);
-  --color-8: oklch(0.75 0.12 170); */
+  --bg-color: var(--background);
+  --txt-color: var(--foreground);
+  --header-bg: var(--card);
+  --footer-bg: var(--card);
+  --header-txt: var(--card-foreground);
+  --footer-txt: var(--card-foreground);
+  --link-color: var(--accent);
+  --toggle-bg: var(--background);
+  --border1: var(--primary);
+  --accent1: var(--accent);
+  --howdy-color: var(--primary);
   --color-1: oklch(0.175 0.032 165);
   --color-2: oklch(0.206 0.045 165);
   --color-3: oklch(0.269 0.083 165);
@@ -29,7 +22,20 @@
   --color-10: oklch(0.662 0.178 165);
   --color-11: oklch(0.831 0.115 165);
   --color-12: oklch(0.912 0.068 165);
+  --color-1: oklch(0.87 0.01 95);
+  --color-2: oklch(0.73 0.05 125);
+  --color-3: oklch(0.56 0.08 135);
+  --color-4: oklch(0.41 0.06 145);
+  --color-5: oklch(0.35 0.05 150);
+  --background: oklch(22.648% 0.04933 162.486);
+  --foreground: oklch(95.497% 0.05138 170.38);
+  --card: oklch(26.605% 0.05893 161.365);
+  --card-foreground: oklch(95.497% 0.05138 170.38);
+  --primary: oklch(63.256% 0.15016 157.189);
+  --primary-foreground: oklch(22.648% 0.04933 162.486);
+  --accent: oklch(90.249% 0.15586 164.077);
 }
+
 
 :has(#light-mode-toggle:checked) {
   --bg-color: var(--color-12);
@@ -39,6 +45,13 @@
   --link-color: var(--color-4);
   --txt-color: oklch(0 0 0);
   --toggle-bg: var(--color-9);
+  --background: oklch(97.448% 0.02284 173.15);
+  --foreground: oklch(22.648% 0.04933 162.486);
+  --card: oklch(100% 0.00011 271.152);
+  --card-foreground: oklch(22.648% 0.04933 162.486);
+  --primary: oklch(34.433% 0.07856 159.496);
+  --primary-foreground: oklch(97.448% 0.02284 173.15);
+  --accent: oklch(30.743% 0.06966 159.917);
 }
 
 body {
@@ -54,13 +67,17 @@ body {
   margin: 0;
 }
 
+
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background: var(--header-bg);
   color: var(--header-txt);
+  z-index: 1000;
 
   .navbar {
     /* margin-bottom: 2em; */
@@ -141,29 +158,63 @@ footer {
 }
 
 .animate span:nth-of-type(2) {
-	animation-delay: .05s;
+  animation-delay: 0.05s;
 }
 .animate span:nth-of-type(3) {
-	animation-delay: .1s;
+  animation-delay: 0.1s;
 }
 .animate span:nth-of-type(4) {
-	animation-delay: .15s;
+  animation-delay: 0.15s;
 }
 .animate span:nth-of-type(5) {
-	animation-delay: .2s;
+  animation-delay: 0.2s;
 }
 .animate span:nth-of-type(6) {
-	animation-delay: .25s;
+  animation-delay: 0.25s;
 }
 
+
 .howdy span {
-  color: #ddb50f;
+  color: var(--howdy-color);
   opacity: 0;
   transform: rotate(-180deg) translate(150px, 0);
-  animation: howdy .75s forwards;
+  animation: howdy 0.75s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+:has(#replay-animation:checked) .animate span:nth-of-type(2) {
+  animation-delay: 0.05s;
+}
+:has(#replay-animation:checked) .animate span:nth-of-type(3) {
+  animation-delay: 0.1s;
+}
+:has(#replay-animation:checked) .animate span:nth-of-type(4) {
+  animation-delay: 0.15s;
+}
+:has(#replay-animation:checked) .animate span:nth-of-type(5) {
+  animation-delay: 0.2s;
+}
+:has(#replay-animation:checked) .animate span:nth-of-type(6) {
+  animation-delay: 0.25s;
+}
+
+:has(#replay-animation:checked) .howdy span {
+  opacity: 0;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: howdy2 0.75s forwards;
 }
 
 @keyframes howdy {
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translate(0);
+    opacity: 1;
+  }
+}
+@keyframes howdy2 {
   10% {
     opacity: 1;
   }
@@ -196,6 +247,7 @@ a {
   background-color: var(--tetradic-3);
 }
 
+
 .intro {
   margin-top: 0em;
   margin-bottom: 3em;
@@ -204,6 +256,23 @@ a {
 
   #small-about {
     margin-top: 0em;
+  }
+
+  .replay-button {
+    display: inline-block;
+    /* margin-top: 1em; */
+    padding: 0.5em 1em;
+    background-color: var(--accent1);
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      background-color: var(--border1);
+      text-decoration: underline;
+    }
   }
 }
 
@@ -223,17 +292,17 @@ a {
 
   .post-card {
     padding: 1.5em;
-    background-color: var(--accent1);
+    background-color: var(--card);
     border-left: 4px solid var(--border1);
     h3 {
       margin: 0;
     }
     a {
-      color: #333;
+      /* color: #333; */
       text-decoration: none;
     }
     .read-more {
-      color: #333;
+      /* color: #333; */
       text-decoration: none;
       font-weight: bold;
       &:hover {
@@ -250,7 +319,7 @@ a {
     }
 
     .post-date {
-      color: #666;
+      /* color: #666; */
       font-size: 0.9em;
       margin: 0;
       white-space: nowrap;
@@ -259,7 +328,7 @@ a {
 
     .post-excerpt {
       margin: 1em 0;
-      color: #555;
+      /* color: #555; */
     }
   }
 }
