@@ -20,11 +20,10 @@ const posts = [
 
 <Layout title="Home Page">
   <div class="content">
-    <h1 id="Howdy">Howdy!</h1>
-    <div class="animate howdy">
-      <span>H</span><span>o</span><span>w</span><span>d</span><span>y</span><span>!</span>
-    </div>
     <section class="intro">
+      <div class="animate howdy">
+        <span>H</span><span>o</span><span>w</span><span>d</span><span>y</span><span>!</span>
+      </div>
       <p id="small-about">
 
         My name is Henry Odza. I am a senior computer science student at Case
@@ -32,6 +31,8 @@ const posts = [
         personal site! Learn more about me in the <a href="/about">about me</a> page or check out my recent blog posts below.
 
       </p>
+      <input type="checkbox" id="replay-animation" hidden />
+      <label for ="replay-animation" class="replay-button">Replay Animation</label>
     </section>
 
     <section class="blog-posts">
