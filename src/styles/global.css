@@ -40,11 +40,11 @@
 }
 
 
-/* :has(#light-mode-toggle:checked) {
+:has(#light-mode-toggle:checked) {
   --bg-color: var(--light-background);
   --txt-color: var(--light-foreground);
   --link-color: var(--light-accent);
-} */
+}
 
 body {
   background-color: var(--bg-color);
