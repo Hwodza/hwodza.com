@@ -29,4 +29,4 @@ My love for open source led me to CWRUnix, the Linux club on campus, this past f
 You can email me at hwodza [AT] gmail [DOT] com
 
 # A little about this site
-This site is made with the Astro framework, which means that there is no client side javascript. You can view all the code on my github, and the site is hosted with
+This site is made with the Astro framework, which means that there is no client side javascript (including the howdy animation on the home page!). You can view all the code on my github, and the site is hosted on a cloudflare worker.
