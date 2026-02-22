@@ -3,8 +3,6 @@ import { defineConfig } from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
 
-const isDev = process.env.NODE_ENV === 'development';
-
 // https://astro.build/config
 export default defineConfig({
   base: '/',
@@ -13,7 +11,7 @@ export default defineConfig({
       minify: true
     }
   },
-  adapter: isDev ? undefined : cloudflare({
+  adapter: cloudflare({
     mode: 'directory'
   })
 });
