@@ -13,7 +13,6 @@ export default defineConfig({
     }
   },
   adapter: cloudflare({
-    mode: 'directory',
     platformProxy: {
       enabled: true,
     }
