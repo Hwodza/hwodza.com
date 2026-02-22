@@ -5,6 +5,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://odza.dev',
   base: '/',
   vite: {
     build: {
@@ -12,6 +13,9 @@ export default defineConfig({
     }
   },
   adapter: cloudflare({
-    mode: 'directory'
+    mode: 'directory',
+    platformProxy: {
+      enabled: true,
+    }
   })
 });
