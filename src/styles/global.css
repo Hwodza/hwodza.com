@@ -299,7 +299,7 @@ a:hover {
 
 .blog-posts .post-card {
   padding: 1.5em;
-  background-color: var(--blog);
+  /* background-color: var(--blog); */
   border-left: 4px solid var(--border1);
   border-top: 1px solid var(--border1);
   border-bottom: 1px solid var(--border1);
