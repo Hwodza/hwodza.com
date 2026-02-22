@@ -7,5 +7,6 @@ const isDev = process.env.NODE_ENV === 'development';
 
 // https://astro.build/config
 export default defineConfig({
+  base: '/',
   adapter: isDev ? undefined : cloudflare()
 });

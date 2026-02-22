@@ -10,12 +10,6 @@
 		"binding": "ASSETS",
 		"directory": "./dist"
 	},
-  "routes": [
-    {
-      "pattern": "odza.dev/*",
-      "custom_domain": true
-    }
-  ],
 	"observability": {
     "enabled": true
   }
