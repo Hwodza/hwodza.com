@@ -46,7 +46,7 @@
   /* --header-bg: var(--light-card);
   --header-txt: var(--light-card-foreground); */
   --link-color: var(--light-accent);
-  --txt-color: oklch(0 0 0);
+  /* --txt-color: oklch(0 0 0); */
   /* --toggle-bg: var(--light-primary); */
 }
 
